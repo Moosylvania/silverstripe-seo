@@ -1,0 +1,11 @@
+---
+Name: moosylvania-seo-routes
+Before:
+  - '#modelascontrollercatchallroute'
+---
+SilverStripe\Control\Director:
+  rules:
+    'llms.txt': 'Moosylvania\SEO\Controllers\LLMsTxtController'
+    'llms-full.txt': 'Moosylvania\SEO\Controllers\LLMsTxtController'
+    # Page-level index.md is handled by MarkdownControllerExtension; the home page needs its own rule
+    'index.md': 'SilverStripe\CMS\Controllers\RootURLController'

@@ -1,0 +1,42 @@
+{
+    "name": "moosylvania/silverstripe-seo",
+    "description": "Modern SEO, OpenGraph and LLM optimizations for SilverStripe",
+    "type": "silverstripe-vendormodule",
+    "keywords": ["silverstripe", "seo", "facebook", "twitter", "opengraph", "llms.txt", "markdown"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moosylvania",
+            "homepage": "https://moosylvania.com"
+        },
+        {
+            "name": "Joseph Madden",
+            "homepage": "https://barmadden.com",
+            "role": "author"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "silverstripe/cms": "^6",
+        "wilr/silverstripe-googlesitemaps": "^4",
+        "league/html-to-markdown": "^5.1"
+    },
+    "require-dev": {
+        "silverstripe/recipe-testing": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moosylvania\\SEO\\": "src/",
+            "Moosylvania\\SEO\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true,
+            "silverstripe/recipe-plugin": true
+        }
+    }
+}

@@ -1,0 +1,25 @@
+---
+Name: moosylvania-seo
+---
+Page:
+  extensions:
+    - Moosylvania\SEO\Extensions\PageSeoExtension
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Moosylvania\SEO\Extensions\SiteConfigSettingsExtension
+SilverStripe\CMS\Controllers\ContentController:
+  extensions:
+    - Moosylvania\SEO\Extensions\MarkdownControllerExtension
+# Enforced by core CanonicalURLMiddleware
+SilverStripe\Control\Controller:
+  add_trailing_slash: true
+---
+Name: moosylvania-seo-cache
+---
+SilverStripe\Core\Injector\Injector:
+  Psr\SimpleCache\CacheInterface.MoosylvaniaSEO:
+    factory: SilverStripe\Core\Cache\CacheFactory
+    constructor:
+      namespace: 'MoosylvaniaSEO'
+      # Matches the googlesitemaps regenerate_time; publishing a page clears it sooner
+      defaultLifetime: 3600

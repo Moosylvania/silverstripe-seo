@@ -1,0 +1,25 @@
+SilverStripe\SiteConfig\SiteConfig:
+  default:
+    Title: 'Test Site'
+    Tagline: 'A site for testing'
+    LLMsIncludeSitemap: true
+
+Page:
+  home:
+    Title: Home
+    URLSegment: home
+    Content: '<p>Welcome home</p>'
+  about:
+    Title: About Us
+    URLSegment: about-us
+    MetaTitle: 'About Test Site'
+    MetaDescription: 'Who we are'
+    Content: "<h2>Our story</h2>\n        <p>We <strong>build</strong> things.</p><script>alert(1)</script><pre><code>  indented code</code></pre>"
+  custom:
+    Title: Custom
+    URLSegment: custom
+    LLMsMarkdown: "# Custom markdown\n\nWritten by hand."
+  hidden:
+    Title: Hidden
+    URLSegment: hidden
+    ShowInSearch: false
