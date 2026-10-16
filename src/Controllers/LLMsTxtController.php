@@ -26,7 +26,7 @@ class LLMsTxtController extends Controller
 {
     public const string CACHE_SERVICE = CacheInterface::class . '.MoosylvaniaSEO';
 
-    private const string ROUTE_CLASS = 'GoogleSitemapRoute';
+    protected const string ROUTE_CLASS = 'GoogleSitemapRoute';
 
     private static array $url_handlers = [
         'sitemap/$ClassName/$Page/$Locale' => 'sitemap',
